@@ -29,7 +29,7 @@ function calculadora() {
         novaOp();
       }
       function sub(){
-        result = n1 + n2;
+        result = n1 - n2;
         alert(`O resultado de ${n1} - ${n2} e ${result}`);
         novaOp();
       }
