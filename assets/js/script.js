@@ -1,11 +1,11 @@
 function calculadora() {
 
   // definindo as operações e pegando valor de entrada do usuário
-  const opera = Number(prompt('Escolha uma opcao: \n 1 - Soma (+)\n 2 - Subtracao (-)\n 3 - Divisao (/)\n 4 - multiplicacao (*)'));
+  const operacao = Number(prompt('Escolha uma opcao: \n 1 - Soma (+)\n 2 - Subtracao (-)\n 3 - Divisao (/)\n 4 - multiplicacao (*)'));
 
 
    // verificando se a operação é válida
-  if(!opera || opera >= 5){
+  if(!operacao || operacao >= 5){
     alert('Digite uma opcao valida!');
     calculadora();
   }else {
@@ -14,7 +14,7 @@ function calculadora() {
     // todas as entradas devem ser do tipo number
     let n1 = Number(prompt("Insira o primeiro numero: "));
     let n2 = Number(prompt("Insira o segundo numero: "));
-    let result;
+    let resultado;
 
     // verificando se as variáveis são válidas
     if(!n1 || !n2){
@@ -24,53 +24,53 @@ function calculadora() {
 
       // definindo as funções
       function soma(){
-        result = n1 + n2;
-        alert(`O resultado de ${n1} + ${n2} e ${result}`);
-        novaOp();
+       resultado = n1 + n2;
+        alert(`O resultado de ${n1} + ${n2} e ${resultado}`);
+        novaOperacao();
       }
-      function sub(){
-        result = n1 - n2;
-        alert(`O resultado de ${n1} - ${n2} e ${result}`);
-        novaOp();
+      function subtracao(){
+        resultado = n1 - n2;
+        alert(`O resultado de ${n1} - ${n2} e ${resultado}`);
+        novaOperacao();
       }
-      function multi(){
-        result = n1 / n2;
-        alert(`O resultado de ${n1} / ${n2} e ${result}`);
-        novaOp();
+      function divisao(){
+        resultado = n1 / n2;
+        alert(`O resultado de ${n1} / ${n2} e ${resultado}`);
+        novaOperacao();
       }
-      function div(){
-        result = n1 * n2;
-        alert(`O resultado de ${n1} * ${n2} e ${result}`);
-        novaOp();
+      function multiplicacao(){
+        resultado = n1 * n2;
+        alert(`O resultado de ${n1} * ${n2} e ${resultado}`);
+        novaOperacao();
       }
 
-      function novaOp(){
-        let novaOp = prompt('Deseja realizar outra operacao?\n 1 - Sim\n 2 - Nao');
-        if(novaOp == 1){
+      function novaOperacao(){
+        let novaOperacao = prompt('Deseja realizar outra operacao?\n 1 - Sim\n 2 - Nao');
+        if(novaOperacao == 1){
           calculadora();
-        }else if(novaOp == 2) {
+        }else if(novaOperacao == 2) {
           alert('ate mais')
         }else {
           alert('Digite uma opcao valida')
-          novaOp();
+          novaOperacao();
         }
       }
       
       }
     }
 
-    switch(opera){
+    switch(operacao){
       case 1:
         soma();
         break;
       case 2:
-        sub();
+        subtracao();
         break;
       case 3:
-        div();
+        divisao();
         break;
       case 4:
-        multi();
+        multiplicacao();
         break;
     
   }
